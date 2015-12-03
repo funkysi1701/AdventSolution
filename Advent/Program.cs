@@ -1046,8 +1046,8 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(p.HouseVisit2(p.input));
             Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
+            Console.WriteLine("Day 4");
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
