@@ -2376,17 +2376,19 @@ namespace Advent
                 p.lights(input3[i]);
             }
             int light = 0;
+            int bness = 0;
             for (int a = 0; a < 1000; a++)
             {
                 for (int b = 0; b < 1000; b++)
                 {
                     if (p.LightStatus[a, b] == true) light++;
+                    bness = bness + p.Brightness[a, b];
                 }
             }
             Console.WriteLine(light);
             Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
+            Console.WriteLine(bness.ToString());
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
@@ -2417,6 +2419,8 @@ namespace Advent
             //Console.ReadLine();
         }
         public bool[,] LightStatus = new bool[1000, 1000];
+
+        public int[,] Brightness = new int[1000, 1000];
         private string lights(string instructions)
         {
             if (instructions.Contains("toggle"))
@@ -2434,6 +2438,8 @@ namespace Advent
                 {
                     for (int y = fromy; y < toy + 1; y++)
                     {
+                        ++Brightness[x, y];
+                        ++Brightness[x, y];
                         if (LightStatus[x, y] == true)
                         {
                             LightStatus[x, y] = false;
@@ -2462,6 +2468,7 @@ namespace Advent
                     for (int y = fromy; y < toy+1; y++)
                     {
                         LightStatus[x, y]= true;
+                        ++Brightness[x, y];
                     }
                 }
                 //string from = instructions.Substring(0, 6);
@@ -2484,6 +2491,7 @@ namespace Advent
                     for (int y = fromy; y < toy + 1; y++)
                     {
                         LightStatus[x, y] = false;
+                        if(Brightness[x, y]>0) --Brightness[x, y];
                     }
                 }
                 return "off";
