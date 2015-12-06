@@ -1052,7 +1052,7 @@ namespace Advent
             p.input = "yzbqklnj";
             Console.WriteLine(p.adventcoins(p.input));
             Console.ReadLine();
-            //Console.WriteLine(p.adventcoins2(p.input));
+            Console.WriteLine(p.adventcoins2(p.input));
             Console.ReadLine();
             Console.WriteLine("Day 5");
             Console.ReadLine();
@@ -2070,6 +2070,7 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine("Day 6");
             Console.ReadLine();
+            
             string[] input3 = new string[300] {"turn on 887,9 through 959,629",
 "turn on 454,398 through 844,448",
 "turn off 539,243 through 559,965",
@@ -2370,7 +2371,19 @@ namespace Advent
 "toggle 534,948 through 599,968",
 "turn on 522,730 through 968,950",
 "turn off 102,229 through 674,529"            };
-            Console.WriteLine(p.lights(input3[0]));
+            for (int i = 0; i < input3.Length; i++)
+            {
+                p.lights(input3[i]);
+            }
+            int light = 0;
+            for (int a = 0; a < 1000; a++)
+            {
+                for (int b = 0; b < 1000; b++)
+                {
+                    if (p.LightStatus[a, b] == true) light++;
+                }
+            }
+            Console.WriteLine(light);
             Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
@@ -2403,12 +2416,33 @@ namespace Advent
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
         }
-
+        public bool[,] LightStatus = new bool[1000, 1000];
         private string lights(string instructions)
         {
             if (instructions.Contains("toggle"))
             {
                 instructions = instructions.Substring(7);
+                string[] coord = instructions.Split('t');
+                coord[1] = coord[1].Substring(7);
+                string[] from = coord[0].Split(',');
+                string[] to = coord[1].Split(',');
+                int fromx = Convert.ToInt32(from[0]);
+                int fromy = Convert.ToInt32(from[1]);
+                int tox = Convert.ToInt32(to[0]);
+                int toy = Convert.ToInt32(to[1]);
+                for (int x = fromx; x < tox + 1; x++)
+                {
+                    for (int y = fromy; y < toy + 1; y++)
+                    {
+                        if (LightStatus[x, y] == true)
+                        {
+                            LightStatus[x, y] = false;
+                        }
+                        else {
+                            LightStatus[x, y] = true;
+                        }
+                    }
+                }
                 return "toggle";
             }
             else if (instructions.Contains("turn on"))
@@ -2422,14 +2456,36 @@ namespace Advent
                 int fromy = Convert.ToInt32(from[1]);
                 int tox = Convert.ToInt32(to[0]);
                 int toy = Convert.ToInt32(to[1]);
-                int numLights = (tox - fromx + 1) * (toy - fromy + 1);
+                //int numLights = (tox - fromx + 1) * (toy - fromy + 1);
+                for (int x = fromx; x < tox+1; x++)
+                {
+                    for (int y = fromy; y < toy+1; y++)
+                    {
+                        LightStatus[x, y]= true;
+                    }
+                }
                 //string from = instructions.Substring(0, 6);
                 //string to = instructions.Substring()
-                return numLights.ToString();
+                return "on";
             }
             else if (instructions.Contains("turn off"))
             {
                 instructions = instructions.Substring(9);
+                string[] coord = instructions.Split('t');
+                coord[1] = coord[1].Substring(7);
+                string[] from = coord[0].Split(',');
+                string[] to = coord[1].Split(',');
+                int fromx = Convert.ToInt32(from[0]);
+                int fromy = Convert.ToInt32(from[1]);
+                int tox = Convert.ToInt32(to[0]);
+                int toy = Convert.ToInt32(to[1]);
+                for (int x = fromx; x < tox + 1; x++)
+                {
+                    for (int y = fromy; y < toy + 1; y++)
+                    {
+                        LightStatus[x, y] = false;
+                    }
+                }
                 return "off";
             }
             else return "error";
