@@ -2061,13 +2061,15 @@ namespace Advent
             int nice2 = 0;
             for (int i = 0; i < input2.Length; i++)
             {
-                if(p.niceString(input2[i])) nice++;
+                if (p.niceString(input2[i])) nice++;
                 if (p.niceString2(input2[i])) nice2++;
             }
             Console.WriteLine(nice.ToString());
             Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
+            Console.WriteLine(nice2.ToString());
+            Console.ReadLine();
+            Console.WriteLine("Day 6");
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
@@ -2103,7 +2105,26 @@ namespace Advent
         }
         public bool niceString2(string naughtyList)
         {
-            return true;
+            bool oneapart = false;
+            bool twochars = false;
+
+            for (int j = 0; j < naughtyList.Count() - 2; j++)
+            {
+                if (naughtyList[j] == naughtyList[j + 2])
+                {
+                    oneapart = true;
+                }
+            }
+            for (int p = 0; p < naughtyList.Count() - 1; p++)
+            {
+                if (naughtyList.Substring(p + 2).Contains(naughtyList.Substring(p, 2)))
+                {
+                    twochars = true;
+                    var s1 = naughtyList.Substring(p + 2);
+                    var s2 = naughtyList.Substring(p, 2);
+                }
+            }
+            return oneapart && twochars;
         }
         public bool niceString(string naughtyList)
         {
@@ -2117,8 +2138,8 @@ namespace Advent
             int i = naughtyList.Split('i').Length - 1;
             int o = naughtyList.Split('o').Length - 1;
             int u = naughtyList.Split('u').Length - 1;
-            bool vowels = (a + e + i + o + u > 2) ;
-            for (int j = 0; j < naughtyList.Count()-1; j++)
+            bool vowels = (a + e + i + o + u > 2);
+            for (int j = 0; j < naughtyList.Count() - 1; j++)
             {
                 if (naughtyList[j] == naughtyList[j + 1])
                 {
@@ -2133,7 +2154,7 @@ namespace Advent
             {
                 return false;
             }
-            
+
         }
         public string adventcoins(string input)
         {
@@ -2144,8 +2165,8 @@ namespace Advent
                 string hash = CalculateMD5Hash(newinput);
                 if (hash.Substring(0, 5) == "00000") return j;
             }
-                
-            
+
+
             return "never found try more loops";
         }
 
@@ -2191,7 +2212,7 @@ namespace Advent
 
             houseList.Add(p.coord(xx, yy));
             houseListPresents.Add(p.coordandpresents(xx, yy, presents));
-            for (int i = 0; i < chars.Length; i+=2)
+            for (int i = 0; i < chars.Length; i += 2)
             {
                 if (chars[i] == '>')
                 {
@@ -2264,7 +2285,7 @@ namespace Advent
             int presents = 1;
             int numberofhouses = 1;
             Program p = new Program();
-           
+
             houseList.Add(p.coord(xx, yy));
             houseListPresents.Add(p.coordandpresents(xx, yy, presents));
             for (int i = 0; i < chars.Length; i++)
@@ -2299,15 +2320,15 @@ namespace Advent
             return numberofhouses;
 
         }
-        public string coordandpresents(int x,int y,int presents)
+        public string coordandpresents(int x, int y, int presents)
         {
-            return x.ToString() + "," + y.ToString()+"/" + presents.ToString();
+            return x.ToString() + "," + y.ToString() + "/" + presents.ToString();
         }
         public string coord(int x, int y)
         {
             return x.ToString() + "," + y.ToString();
         }
-        public bool vistedBefore(string coord,List<string> houseList)
+        public bool vistedBefore(string coord, List<string> houseList)
         {
             return houseList.Contains(coord);
         }
@@ -2324,29 +2345,29 @@ namespace Advent
             int h = input.Length;
             int height = Convert.ToInt32(input.Substring(l + 1, h - (l + 1)));
 
-            int[] smallest = new int[3] { width + width +height+height , length+ length +height+height, length+length+width+width };
+            int[] smallest = new int[3] { width + width + height + height, length + length + height + height, length + length + width + width };
             int extra = smallest.Min();
 
 
             return extra + (height * width * length);
-        
-    }
+
+        }
         private int area(string input)
         {
-            
+
             int w = input.IndexOf("x");
             int width = Convert.ToInt32(input.Substring(0, w));
-            
-            int l = input.LastIndexOf("x");
-            int length = Convert.ToInt32(input.Substring(w+1, l-(w+1)));
-            
-            int h = input.Length;
-            int height = Convert.ToInt32(input.Substring(l+1, h-(l+1)));
 
-            int[] smallest = new int[3] { width * height , width * length, length * height};
+            int l = input.LastIndexOf("x");
+            int length = Convert.ToInt32(input.Substring(w + 1, l - (w + 1)));
+
+            int h = input.Length;
+            int height = Convert.ToInt32(input.Substring(l + 1, h - (l + 1)));
+
+            int[] smallest = new int[3] { width * height, width * length, length * height };
             int extra = smallest.Min();
 
-            return 2*height*length + 2*width*height + 2*length*width + extra;
+            return 2 * height * length + 2 * width * height + 2 * length * width + extra;
         }
 
         public int UpDown(string input)
@@ -2358,9 +2379,9 @@ namespace Advent
             {
                 if (chars[i] == '(') result++;
                 if (chars[i] == ')') result--;
-                
+
             }
-                
+
             return result;
         }
 
