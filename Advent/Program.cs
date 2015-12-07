@@ -2389,8 +2389,8 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(bness.ToString());
             Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
+            Console.WriteLine("Day 7");
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
@@ -2421,6 +2421,11 @@ namespace Advent
         public bool[,] LightStatus = new bool[1000, 1000];
 
         public int[,] Brightness = new int[1000, 1000];
+
+        public void logicgate(string input)
+        {
+            //todo
+        }
         private string lights(string instructions)
         {
             if (instructions.Contains("toggle"))
