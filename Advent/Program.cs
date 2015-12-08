@@ -95,8 +95,8 @@ namespace Advent
             {
                 d7.logicgate(d7.input4[i]);
             }
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
+            Console.WriteLine(d7.logic[1,0]);
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
