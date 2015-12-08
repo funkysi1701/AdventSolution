@@ -9,12 +9,28 @@ namespace Advent
 {
     public class Program
     {
-        public int Count;
-
         //http://adventofcode.com/
 
-        public string input;
         public static void Main(string[] args)
+        {
+            Console.Write("Enter any Key: ");
+            int name = Console.Read();
+            switch (name)
+            {
+                case 49: day1(); break;
+                case 50: day2(); break;
+                case 51: day3(); break;
+                case 52: day4(); break;
+                case 53: day5(); break;
+                case 54: day6(); break;
+                case 55: day7(); break;
+                case 56: day8(); break;
+                //case 9: day9(); break;
+                //case 10: day10(); break;
+                default: break;
+            }
+        }
+        public static void day1()
         {
             //Day 1 Challenge
             day1 d1 = new day1();
@@ -25,6 +41,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d1.Basement(d1.input));
             Console.ReadLine();
+        }
+        public static void day2()
+        {
             //Day 2 Challenge
             day2 d2 = new day2();
             Console.WriteLine("Day 2");
@@ -38,6 +57,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d2.result2);
             Console.ReadLine();
+        }
+        public static void day3()
+        {
             //Day 3 Challenge
             day3 d3 = new day3();
             Console.WriteLine("Day 3");
@@ -46,6 +68,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d3.HouseVisit2(d3.input));
             Console.ReadLine();
+        }
+        public static void day4()
+        {
             //Day 4 Challenge
             day4 d4 = new day4();
             Console.WriteLine("Day 4");
@@ -54,6 +79,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d4.adventcoins2(d4.input));
             Console.ReadLine();
+        }
+        public static void day5()
+        {
             //Day 5 Challenge
             day5 d5 = new day5();
             Console.WriteLine("Day 5");
@@ -67,6 +95,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d5.nice2.ToString());
             Console.ReadLine();
+        }
+        public static void day6()
+        {
             //Day 6 Challenge
             day6 d6 = new day6();
             Console.WriteLine("Day 6");
@@ -87,6 +118,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d6.bness.ToString());
             Console.ReadLine();
+        }
+        public static void day7()
+        {
             //Day 7 Challenge
             day7 d7 = new day7();
             Console.WriteLine("Day 7");
@@ -97,6 +131,9 @@ namespace Advent
             }
             Console.WriteLine(d7.logic[1, 0]);
             Console.ReadLine();
+        }
+        public static void day8()
+        {
             //Day 8 Challenge
             day8 d8 = new day8();
             Console.WriteLine("Day 8"); //Between 510 and 5150
@@ -104,34 +141,9 @@ namespace Advent
             for (int i = 0; i < d8.input2.Length; i++)
             {
                 Console.WriteLine(d8.rawLength(d8.input2[i]));
-                Console.WriteLine(d8.actualLength(d8.input2[i])); 
+                Console.WriteLine(d8.actualLength(d8.input2[i]));
             }
-            
             Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
-            //Console.WriteLine("Day 2");
-            //Console.ReadLine();
         }
     }
 }
