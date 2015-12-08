@@ -95,13 +95,18 @@ namespace Advent
             {
                 d7.logicgate(d7.input4[i]);
             }
-            Console.WriteLine(d7.logic[1,0]);
+            Console.WriteLine(d7.logic[1, 0]);
             Console.ReadLine();
             //Day 8 Challenge
             day8 d8 = new day8();
-            Console.WriteLine("Day 8");
+            Console.WriteLine("Day 8"); //Between 510 and 5150
             Console.ReadLine();
-            Console.WriteLine(d8.actualLength(d8.input));
+            for (int i = 0; i < d8.input2.Length; i++)
+            {
+                Console.WriteLine(d8.rawLength(d8.input2[i]));
+                Console.WriteLine(d8.actualLength(d8.input2[i])); 
+            }
+            
             Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
