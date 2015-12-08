@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Advent
 {
@@ -13,7 +8,7 @@ namespace Advent
 
         public static void Main(string[] args)
         {
-            Console.Write("Enter any Key: ");
+            Console.Write("Choose which advent code to run (1-25): ");
             int name = Console.Read();
             switch (name)
             {
@@ -140,9 +135,10 @@ namespace Advent
             Console.ReadLine();
             for (int i = 0; i < d8.input2.Length; i++)
             {
-                Console.WriteLine(d8.rawLength(d8.input2[i]));
-                Console.WriteLine(d8.actualLength(d8.input2[i]));
+                d8.total = d8.total + (d8.rawLength(d8.input2[i])) - (d8.actualLength(d8.input2[i]));
+                
             }
+            Console.WriteLine(d8.total);
             Console.ReadLine();
         }
     }
