@@ -97,6 +97,12 @@ namespace Advent
             }
             Console.WriteLine(d7.logic[1,0]);
             Console.ReadLine();
+            //Day 8 Challenge
+            day8 d8 = new day8();
+            Console.WriteLine("Day 8");
+            Console.ReadLine();
+            Console.WriteLine(d8.actualLength(d8.input));
+            Console.ReadLine();
             //Console.WriteLine("Day 2");
             //Console.ReadLine();
             //Console.WriteLine("Day 2");
