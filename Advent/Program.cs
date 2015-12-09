@@ -141,5 +141,12 @@ namespace Advent
             Console.WriteLine(d8.total);
             Console.ReadLine();
         }
+        public static void day9()
+        {
+            //Day 9 Challenge
+            day9 d9 = new day9();
+            Console.WriteLine("Day 9");
+            Console.ReadLine();
+        }
     }
 }
