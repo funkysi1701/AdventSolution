@@ -44,7 +44,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="day1.cs" />
+    <Compile Include="day10.cs" />
+    <Compile Include="day11.cs" />
+    <Compile Include="day12.cs" />
+    <Compile Include="day13.cs" />
+    <Compile Include="day14.cs" />
+    <Compile Include="day15.cs" />
+    <Compile Include="day16.cs" />
+    <Compile Include="day17.cs" />
+    <Compile Include="day18.cs" />
+    <Compile Include="day19.cs" />
     <Compile Include="day2.cs" />
+    <Compile Include="day20.cs" />
+    <Compile Include="day21.cs" />
+    <Compile Include="day22.cs" />
+    <Compile Include="day23.cs" />
+    <Compile Include="day24.cs" />
+    <Compile Include="day25.cs" />
     <Compile Include="day3.cs" />
     <Compile Include="day4.cs" />
     <Compile Include="day5.cs" />
