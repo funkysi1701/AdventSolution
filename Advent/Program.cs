@@ -20,8 +20,23 @@ namespace Advent
                 case 54: day6(); break;
                 case 55: day7(); break;
                 case 56: day8(); break;
-                //case 9: day9(); break;
-                //case 10: day10(); break;
+                case 57: day9(); break;
+                case 58: day10(); break;
+                case 59: day11(); break;
+                case 60: day12(); break;
+                case 61: day13(); break;
+                case 62: day14(); break;
+                case 63: day15(); break;
+                case 64: day16(); break;
+                case 65: day17(); break;
+                case 66: day18(); break;
+                case 67: day19(); break;
+                case 68: day20(); break;
+                case 69: day21(); break;
+                case 70: day22(); break;
+                case 71: day23(); break;
+                case 72: day24(); break;
+                case 73: day25(); break;
                 default: break;
             }
         }
@@ -148,5 +163,118 @@ namespace Advent
             Console.WriteLine("Day 9");
             Console.ReadLine();
         }
+        public static void day10()
+        {
+            //Day 10 Challenge
+            day10 d10 = new day10();
+            Console.WriteLine("Day 10");
+            Console.ReadLine();
+        }
+        public static void day11()
+        {
+            //Day 11 Challenge
+            day11 d11 = new day11();
+            Console.WriteLine("Day 11");
+            Console.ReadLine();
+        }
+        public static void day12()
+        {
+            //Day 12 Challenge
+            day12 d12 = new day12();
+            Console.WriteLine("Day 12");
+            Console.ReadLine();
+        }
+        public static void day13()
+        {
+            //Day 13 Challenge
+            day13 d13 = new day13();
+            Console.WriteLine("Day 13");
+            Console.ReadLine();
+        }
+        public static void day14()
+        {
+            //Day 14 Challenge
+            day14 d14 = new day14();
+            Console.WriteLine("Day 14");
+            Console.ReadLine();
+        }
+        public static void day15()
+        {
+            //Day 15 Challenge
+            day15 d15 = new day15();
+            Console.WriteLine("Day 15");
+            Console.ReadLine();
+        }
+        public static void day16()
+        {
+            //Day 16 Challenge
+            day16 d16 = new day16();
+            Console.WriteLine("Day 16");
+            Console.ReadLine();
+        }
+        public static void day17()
+        {
+            //Day 17 Challenge
+            day17 d17 = new day17();
+            Console.WriteLine("Day 17");
+            Console.ReadLine();
+        }
+        public static void day18()
+        {
+            //Day 18 Challenge
+            day18 d18 = new day18();
+            Console.WriteLine("Day 18");
+            Console.ReadLine();
+        }
+        public static void day19()
+        {
+            //Day 19 Challenge
+            day19 d19 = new day19();
+            Console.WriteLine("Day 19");
+            Console.ReadLine();
+        }
+        public static void day20()
+        {
+            //Day 20 Challenge
+            day20 d20 = new day20();
+            Console.WriteLine("Day 20");
+            Console.ReadLine();
+        }
+        public static void day21()
+        {
+            //Day 21 Challenge
+            day21 d21 = new day21();
+            Console.WriteLine("Day 21");
+            Console.ReadLine();
+        }
+        public static void day22()
+        {
+            //Day 22 Challenge
+            day22 d22 = new day22();
+            Console.WriteLine("Day 22");
+            Console.ReadLine();
+        }
+        public static void day23()
+        {
+            //Day 23 Challenge
+            day23 d23 = new day23();
+            Console.WriteLine("Day 23");
+            Console.ReadLine();
+        }
+        public static void day24()
+        {
+            //Day 24 Challenge
+            day24 d24 = new day24();
+            Console.WriteLine("Day 24");
+            Console.ReadLine();
+        }
+        public static void day25()
+        {
+            //Day 25 Challenge
+            day25 d25 = new day25();
+            Console.WriteLine("Day 25");
+            Console.ReadLine();
+        }
+
     }
 }
