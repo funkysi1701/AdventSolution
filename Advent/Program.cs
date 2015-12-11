@@ -9,34 +9,34 @@ namespace Advent
         public static void Main(string[] args)
         {
             Console.Write("Choose which advent code to run (1-25): ");
-            int name = Console.Read();
+            string name = Console.ReadLine();
             switch (name)
             {
-                case 49: day1(); break;
-                case 50: day2(); break;
-                case 51: day3(); break;
-                case 52: day4(); break;
-                case 53: day5(); break;
-                case 54: day6(); break;
-                case 55: day7(); break;
-                case 56: day8(); break;
-                case 57: day9(); break;
-                case 58: day10(); break;
-                case 59: day11(); break;
-                case 60: day12(); break;
-                case 61: day13(); break;
-                case 62: day14(); break;
-                case 63: day15(); break;
-                case 64: day16(); break;
-                case 65: day17(); break;
-                case 66: day18(); break;
-                case 67: day19(); break;
-                case 68: day20(); break;
-                case 69: day21(); break;
-                case 70: day22(); break;
-                case 71: day23(); break;
-                case 72: day24(); break;
-                case 73: day25(); break;
+                case "1": day1(); break;
+                case "2": day2(); break;
+                case "3": day3(); break;
+                case "4": day4(); break;
+                case "5": day5(); break;
+                case "6": day6(); break;
+                case "7": day7(); break;
+                case "8": day8(); break;
+                case "9": day9(); break;
+                case "10": day10(); break;
+                case "11": day11(); break;
+                case "12": day12(); break;
+                case "13": day13(); break;
+                case "14": day14(); break;
+                case "15": day15(); break;
+                case "16": day16(); break;
+                case "17": day17(); break;
+                case "18": day18(); break;
+                case "19": day19(); break;
+                case "20": day20(); break;
+                case "21": day21(); break;
+                case "22": day22(); break;
+                case "23": day23(); break;
+                case "24": day24(); break;
+                case "25": day25(); break;
                 default: break;
             }
         }
@@ -168,6 +168,21 @@ namespace Advent
             //Day 10 Challenge
             day10 d10 = new day10();
             Console.WriteLine("Day 10");
+            Console.ReadLine();
+            for (int i = 0; i < 45; i++)
+            {
+                d10.input = d10.parseNumbers(d10.input);
+                Console.WriteLine(i);
+            }
+            Console.WriteLine(d10.input.Length);
+            Console.ReadLine();
+            d10.input = "1113122113";
+            for (int i = 0; i < 40; i++)
+            {
+                d10.input = d10.parseNumbers(d10.input);
+                Console.WriteLine(i);
+            }
+            Console.WriteLine(d10.input.Length);
             Console.ReadLine();
         }
         public static void day11()
