@@ -169,18 +169,17 @@ namespace Advent
             day10 d10 = new day10();
             Console.WriteLine("Day 10");
             Console.ReadLine();
-            for (int i = 0; i < 45; i++)
+            for (int i = 0; i < 40; i++)
             {
                 d10.input = d10.parseNumbers(d10.input);
                 Console.WriteLine(i);
             }
             Console.WriteLine(d10.input.Length);
             Console.ReadLine();
-            d10.input = "1113122113";
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 10; i++)
             {
                 d10.input = d10.parseNumbers(d10.input);
-                Console.WriteLine(i);
+                Console.WriteLine(i+40);
             }
             Console.WriteLine(d10.input.Length);
             Console.ReadLine();
