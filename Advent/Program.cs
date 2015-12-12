@@ -151,7 +151,7 @@ namespace Advent
             for (int i = 0; i < d8.input2.Length; i++)
             {
                 d8.total = d8.total + (d8.rawLength(d8.input2[i])) - (d8.actualLength(d8.input2[i]));
-                
+
             }
             Console.WriteLine(d8.total);
             Console.ReadLine();
@@ -187,7 +187,7 @@ namespace Advent
             {
                 Console.WriteLine(d10.input.Length);
                 d10.input = d10.parseNumbers(d10.input);
-                Console.WriteLine(i+40);
+                Console.WriteLine(i + 40);
                 Console.WriteLine(DateTime.UtcNow);
             }
             Console.WriteLine(d10.input.Length);

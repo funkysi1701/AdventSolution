@@ -317,9 +317,9 @@
             int length = input.Length;
             for (int i = 0; i < input.Length; i++)
             {
-                if (input.Substring(i, 1) == escape1)  length++;
-                if (input.Substring(i, 1) == escape2)  length++;
-                if (input.Substring(i, 1) == escape3)  length = length +3;
+                if (input.Substring(i, 1) == escape1) length++;
+                if (input.Substring(i, 1) == escape2) length++;
+                if (input.Substring(i, 1) == escape3) length = length + 3;
             }
             return length + 2;
         }

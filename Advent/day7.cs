@@ -12,35 +12,40 @@ namespace Advent
         {
             string[] input2 = input.Split('-');
             input2[1] = input2[1].Substring(2);
-            if (input2[0].Contains("NOT")) {
+            if (input2[0].Contains("NOT"))
+            {
                 input2[0] = input2[0].Substring(4);
                 input2[0] = input2[0].Trim();
                 input2[1] = input2[1].Trim();
-                logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = ~(logic[stringToInt(input2[0].Substring(0,1)), stringToInt(input2[0].Substring(1))]);
+                logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = ~(logic[stringToInt(input2[0].Substring(0, 1)), stringToInt(input2[0].Substring(1))]);
                 if (logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] < 0) { logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = 65536 + logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))]; }
             }
-            else if (input2[0].Contains("OR")) {
+            else if (input2[0].Contains("OR"))
+            {
                 string[] input3 = input2[0].Split('O');
                 input3[1] = input3[1].Substring(2);
                 input3[0] = input3[0].Trim();
                 input3[1] = input3[1].Trim();
                 logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = (logic[stringToInt(input3[0].Substring(0, 1)), stringToInt(input3[0].Substring(1))] | logic[stringToInt(input3[1].Substring(0, 1)), stringToInt(input3[1].Substring(1))]);
             }
-            else if (input2[0].Contains("AND")) {
+            else if (input2[0].Contains("AND"))
+            {
                 string[] input3 = input2[0].Split('A');
                 input3[1] = input3[1].Substring(2);
                 input3[0] = input3[0].Trim();
                 input3[1] = input3[1].Trim();
                 logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = (logic[stringToInt(input3[0].Substring(0, 1)), stringToInt(input3[0].Substring(1))] & logic[stringToInt(input3[1].Substring(0, 1)), stringToInt(input3[1].Substring(1))]);
             }
-            else if (input2[0].Contains("RSHIFT")) {
+            else if (input2[0].Contains("RSHIFT"))
+            {
                 string[] input3 = input2[0].Split('R');
                 input3[1] = input3[1].Substring(6);
                 input3[0] = input3[0].Trim();
                 input3[1] = input3[1].Trim();
                 logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = (logic[stringToInt(input3[0].Substring(0, 1)), stringToInt(input3[0].Substring(1))] >> Convert.ToInt32(input3[1]));
             }
-            else if (input2[0].Contains("LSHIFT")) {
+            else if (input2[0].Contains("LSHIFT"))
+            {
                 string[] input3 = input2[0].Split('L');
                 input3[1] = input3[1].Substring(6);
                 input3[0] = input3[0].Trim();
@@ -52,9 +57,9 @@ namespace Advent
                 logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = Convert.ToInt32(input2[0]);
             }
             else logic[stringToInt(input2[1].Substring(0, 1)), stringToInt(input2[1].Substring(1))] = logic[stringToInt(input2[0].Substring(0, 1)), stringToInt(input2[0].Substring(1))];
-            return logic[1,0];
+            return logic[1, 0];
         }
-        public int[,] logic = new int[27,27];
+        public int[,] logic = new int[27, 27];
 
         public int stringToInt(string value)
         {
@@ -64,7 +69,7 @@ namespace Advent
                 switch (value[i])
                 {
                     case 'a':
-                        result = result+ 1;
+                        result = result + 1;
                         break;
                     case 'b':
                         result = result + 2;
@@ -157,8 +162,8 @@ namespace Advent
 "1 AND lu -> lv",
 "lw OR lv -> lx",
 "lx -> a" };
-            
-            public string[] input4 = new string[339] {
+
+        public string[] input4 = new string[339] {
 "bn RSHIFT 2 -> bo",
 "lf RSHIFT 1 -> ly",
 "fo RSHIFT 3 -> fq",

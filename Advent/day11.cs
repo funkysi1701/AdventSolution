@@ -8,12 +8,12 @@ namespace Advent
 {
     public class day11
     {
-        
+
         public string input = "cqjxjnds";
         public string incrementString(string input)
         {
             string tmp = "";
-            switch (input[input.Length-1])
+            switch (input[input.Length - 1])
             {
                 case 'a': input = input.Remove(input.Length - 1, 1) + "b"; break;
                 case 'b': input = input.Remove(input.Length - 1, 1) + "c"; break;
@@ -44,30 +44,31 @@ namespace Advent
                 default:
                     break;
             }
-            
-            return input+tmp;
+
+            return input + tmp;
         }
 
         public bool ValidString(string input)
         {
             int count = 0;
             int char3 = 0;
-            if (input.Contains("i")){ return false; }
-            if (input.Contains("o")){ return false; }
-            if (input.Contains("l")){ return false; }
-            for (int i = 0; i < input.Length-2; i++)
+            if (input.Contains("i")) { return false; }
+            if (input.Contains("o")) { return false; }
+            if (input.Contains("l")) { return false; }
+            for (int i = 0; i < input.Length - 2; i++)
             {
                 if (input[i] + 1 == input[i + 1] && input[i + 1] + 1 == input[i + 2]) { char3++; }
             }
-            for (int i = 0; i < input.Length-1; i++)
+            for (int i = 0; i < input.Length - 1; i++)
             {
-                if (input[i] == input[i + 1]) {
+                if (input[i] == input[i + 1])
+                {
                     input = input.Remove(i, 2);
-                    input=input.Insert(i, "12");
+                    input = input.Insert(i, "12");
                     count++;
                 }
             }
-            for (int i = 0; i < input.Length-1; i++)
+            for (int i = 0; i < input.Length - 1; i++)
             {
                 if (input[i] == input[i + 1])
                 {
@@ -77,8 +78,7 @@ namespace Advent
                 }
             }
             if (count < 2) return false;
-
-            if(char3>0) return true;
+            if (char3 > 0) return true;
             return false;
         }
     }

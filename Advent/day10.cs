@@ -8,7 +8,7 @@ namespace Advent
 {
     public class day10
     {
-        public string input  = "1113122113";
+        public string input = "1113122113";
 
         public string parseNumbers(string input)
         {
@@ -17,11 +17,12 @@ namespace Advent
             for (int i = 0; i < inputLength; i++)
             {
                 if (inputLength == 1) return "1" + input;
-                if(inputLength > 1)
+                if (inputLength > 1)
                 {
-                    if (i < inputLength - 2 && input[i] == input[i + 1] && input[i + 1] == input[i + 2]) { tmp = tmp + "3" + input[i]; i++;i++; continue; }
-                    if (i < inputLength - 1 && input[i] == input[i + 1]) { tmp = tmp + "2"+input[i];i++;continue; }
-                    if (i < inputLength - 1 && input[i] != input[i + 1]) {
+                    if (i < inputLength - 2 && input[i] == input[i + 1] && input[i + 1] == input[i + 2]) { tmp = tmp + "3" + input[i]; i++; i++; continue; }
+                    if (i < inputLength - 1 && input[i] == input[i + 1]) { tmp = tmp + "2" + input[i]; i++; continue; }
+                    if (i < inputLength - 1 && input[i] != input[i + 1])
+                    {
                         tmp = tmp + "1" + input[i];
                         if (i == inputLength - 2)
                         {
@@ -30,10 +31,10 @@ namespace Advent
                             continue;
                         }
                     }
-                    if(i==inputLength-1) tmp = tmp + "1" + input[i];
+                    if (i == inputLength - 1) tmp = tmp + "1" + input[i];
                 }
 
-                
+
             }
             return tmp;
         }

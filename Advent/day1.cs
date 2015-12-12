@@ -14,7 +14,7 @@ namespace Advent
         {
             var chars = input.ToCharArray();
             int result = 0;
-            
+
             for (int i = 0; i < chars.Length; i++)
             {
                 if (chars[i] == '(') result++;
