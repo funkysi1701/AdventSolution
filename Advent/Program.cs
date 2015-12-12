@@ -171,15 +171,19 @@ namespace Advent
             Console.ReadLine();
             for (int i = 0; i < 40; i++)
             {
+                Console.WriteLine(d10.input.Length);
                 d10.input = d10.parseNumbers(d10.input);
                 Console.WriteLine(i);
+                Console.WriteLine(DateTime.UtcNow);
             }
             Console.WriteLine(d10.input.Length);
             Console.ReadLine();
             for (int i = 0; i < 10; i++)
             {
+                Console.WriteLine(d10.input.Length);
                 d10.input = d10.parseNumbers(d10.input);
                 Console.WriteLine(i+40);
+                Console.WriteLine(DateTime.UtcNow);
             }
             Console.WriteLine(d10.input.Length);
             Console.ReadLine();
