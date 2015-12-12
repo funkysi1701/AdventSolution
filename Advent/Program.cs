@@ -162,6 +162,11 @@ namespace Advent
             day9 d9 = new day9();
             Console.WriteLine("Day 9");
             Console.ReadLine();
+            d9.setup();
+            Console.WriteLine(d9.TotalDistance(true));
+            Console.ReadLine();
+            Console.WriteLine(d9.TotalDistance(false));
+            Console.ReadLine();
         }
         public static void day10()
         {
@@ -194,6 +199,13 @@ namespace Advent
             day11 d11 = new day11();
             Console.WriteLine("Day 11");
             Console.ReadLine();
+            while (!d11.ValidString(d11.input))
+            {
+                d11.input = d11.incrementString(d11.input);
+            }
+            Console.WriteLine(d11.input);
+            Console.ReadLine();
+            d11.input = d11.incrementString(d11.input);
             while (!d11.ValidString(d11.input))
             {
                 d11.input = d11.incrementString(d11.input);
