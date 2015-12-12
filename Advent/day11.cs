@@ -9,7 +9,7 @@ namespace Advent
     public class day11
     {
         
-        public string input = "simon";
+        public string input = "cqjxjnds";
         public string incrementString(string input)
         {
             string tmp = "";
@@ -50,11 +50,36 @@ namespace Advent
 
         public bool ValidString(string input)
         {
+            int count = 0;
+            int char3 = 0;
             if (input.Contains("i")){ return false; }
             if (input.Contains("o")){ return false; }
             if (input.Contains("l")){ return false; }
-            
-            return true;
+            for (int i = 0; i < input.Length-2; i++)
+            {
+                if (input[i] + 1 == input[i + 1] && input[i + 1] + 1 == input[i + 2]) { char3++; }
+            }
+            for (int i = 0; i < input.Length-1; i++)
+            {
+                if (input[i] == input[i + 1]) {
+                    input = input.Remove(i, 2);
+                    input=input.Insert(i, "12");
+                    count++;
+                }
+            }
+            for (int i = 0; i < input.Length-1; i++)
+            {
+                if (input[i] == input[i + 1])
+                {
+                    input = input.Remove(i, 2);
+                    input = input.Insert(i, "34");
+                    count++;
+                }
+            }
+            if (count < 2) return false;
+
+            if(char3>0) return true;
+            return false;
         }
     }
 }
