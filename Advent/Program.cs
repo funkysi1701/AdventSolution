@@ -221,7 +221,9 @@ namespace Advent
             Console.ReadLine();
             Console.WriteLine(d12.CountInput());
             Console.ReadLine();
-            
+            Console.WriteLine(d12.CountInputPart2());
+            Console.ReadLine();
+
         }
         public static void day13()
         {
