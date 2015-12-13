@@ -226,6 +226,9 @@ namespace Advent
             day13 d13 = new day13();
             Console.WriteLine("Day 13");
             Console.ReadLine();
+            d13.setup();
+            Console.WriteLine(d13.CalcHappy());
+            Console.ReadLine();
         }
         public static void day14()
         {
