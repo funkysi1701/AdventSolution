@@ -28,7 +28,7 @@ namespace Advent
 
             return o.Properties().Sum((dynamic a) => (long)GetSum(a.Value, avoid));
         }
-        long GetSum(JValue val, string avoid) => val.Type == JTokenType.Integer ? (long)val.Value : 0; //don't understand
+        long GetSum(JValue val, string avoid) => val.Type == JTokenType.Integer ? (long)val.Value : 0; //don't understand I think it is basically saying if type is Integer returns its value else return 0
         public int CountInput()
         {
             int total = 0;
