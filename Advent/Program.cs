@@ -219,6 +219,9 @@ namespace Advent
             day12 d12 = new day12();
             Console.WriteLine("Day 12");
             Console.ReadLine();
+            Console.WriteLine(d12.CountInput());
+            Console.ReadLine();
+            
         }
         public static void day13()
         {
