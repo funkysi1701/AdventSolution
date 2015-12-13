@@ -229,6 +229,8 @@ namespace Advent
             d13.setup();
             Console.WriteLine(d13.CalcHappy());
             Console.ReadLine();
+            Console.WriteLine(d13.CalcHappyAndMe());
+            Console.ReadLine();
         }
         public static void day14()
         {

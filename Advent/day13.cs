@@ -19,7 +19,7 @@ namespace Advent
             George = 6,
             Mallory = 7
         }
-        public int[,] Happyness = new int[8, 8];
+        public int[,] Happyness = new int[9, 9];
 
         public void setup()
         {
@@ -187,6 +187,91 @@ namespace Advent
                 }
                 Happyness[w, v] = Convert.ToInt32(tmp); 
             }
+        }
+        public int CalcHappyAndMe()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                Happyness[8, i] = 0;
+                Happyness[i, 8] = 0;
+            }
+            int[] happyTotal = new int[16000000];
+            int count = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (i == j) continue;
+                    for (int k = 0; k < 9; k++)
+                    {
+                        if (i == k) continue;
+                        if (j == k) continue;
+                        for (int l = 0; l < 9; l++)
+                        {
+                            if (i == l) continue;
+                            if (j == l) continue;
+                            if (k == l) continue;
+                            for (int m = 0; m < 9; m++)
+                            {
+                                if (i == m) continue;
+                                if (j == m) continue;
+                                if (k == m) continue;
+                                if (l == m) continue;
+                                for (int n = 0; n < 9; n++)
+                                {
+                                    if (i == n) continue;
+                                    if (j == n) continue;
+                                    if (k == n) continue;
+                                    if (l == n) continue;
+                                    if (m == n) continue;
+                                    for (int p = 0; p < 9; p++)
+                                    {
+                                        if (i == p) continue;
+                                        if (j == p) continue;
+                                        if (k == p) continue;
+                                        if (l == p) continue;
+                                        if (m == p) continue;
+                                        if (n == p) continue;
+                                        for (int q = 0; q < 9; q++)
+                                        {
+                                            if (i == q) continue;
+                                            if (j == q) continue;
+                                            if (k == q) continue;
+                                            if (l == q) continue;
+                                            if (m == q) continue;
+                                            if (n == q) continue;
+                                            if (p == q) continue;
+                                            for (int r = 0; r < 9; r++)
+                                            {
+                                                if (i == r) continue;
+                                                if (j == r) continue;
+                                                if (k == r) continue;
+                                                if (l == r) continue;
+                                                if (m == r) continue;
+                                                if (n == r) continue;
+                                                if (p == r) continue;
+                                                if (q == r) continue;
+                                                happyTotal[count] = Happyness[i, j] + Happyness[j, i] +
+                                                Happyness[j, k] + Happyness[k, j] +
+                                                Happyness[k, l] + Happyness[l, k] +
+                                                Happyness[l, m] + Happyness[m, l] +
+                                                Happyness[m, n] + Happyness[n, m] +
+                                                Happyness[n, p] + Happyness[p, n] +
+                                                Happyness[p, q] + Happyness[q, p] +
+                                                Happyness[q, r] + Happyness[r, q] +
+                                                Happyness[r, i] + Happyness[i, r];
+                                                count++;
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return happyTotal.Max();
         }
         public int CalcHappy()
         {
