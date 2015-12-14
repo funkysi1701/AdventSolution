@@ -243,6 +243,10 @@ namespace Advent
             day14 d14 = new day14();
             Console.WriteLine("Day 14");
             Console.ReadLine();
+            Console.WriteLine(d14.FastestPart1());
+            Console.ReadLine();
+            Console.WriteLine(d14.FastestPart2());
+            Console.ReadLine();
         }
         public static void day15()
         {
