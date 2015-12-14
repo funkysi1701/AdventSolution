@@ -148,12 +148,9 @@ namespace Advent
             day8 d8 = new day8();
             Console.WriteLine("Day 8"); //Between 510 and 5150
             Console.ReadLine();
-            for (int i = 0; i < d8.input2.Length; i++)
-            {
-                d8.total = d8.total + (d8.rawLength(d8.input2[i])) - (d8.actualLength(d8.input2[i]));
-
-            }
-            Console.WriteLine(d8.total);
+            Console.WriteLine(d8.doSomething());
+            Console.ReadLine();
+            Console.WriteLine(d8.doSomething2());
             Console.ReadLine();
         }
         public static void day9()
