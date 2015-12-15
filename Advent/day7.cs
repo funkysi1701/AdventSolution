@@ -158,9 +158,13 @@ namespace Advent
         {
             string[] sorted = new string[339];
             sorted[0] = input4[0];
+            // numbersList;
             for (int i = 0; i < input4.Length; i++)
             {
                 sorted[i] = search(input4[i]);
+                var numbersList = input4.ToList();
+                numbersList.Remove(input4[i]);
+                input4 = numbersList.ToArray();
             }
             return sorted[1];
         }
