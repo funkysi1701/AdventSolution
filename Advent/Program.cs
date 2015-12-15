@@ -251,6 +251,10 @@ namespace Advent
             day15 d15 = new day15();
             Console.WriteLine("Day 15");
             Console.ReadLine();
+            Console.WriteLine(d15.buildCookie());
+            Console.ReadLine();
+            Console.WriteLine(d15.buildHealthyCookie());
+            Console.ReadLine();
         }
         public static void day16()
         {
