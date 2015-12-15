@@ -154,14 +154,33 @@ namespace Advent
             return result;
         }
 
-        public string[] input5 = new string[7]
-{"kh LSHIFT 1 -> lb",
-    "1 AND kz -> la",
-    "lb OR la -> lc",
-    "lc LSHIFT 1 -> lw",
-"1 AND lu -> lv",
-"lw OR lv -> lx",
-"lx -> a" };
+        public string sortList()
+        {
+            string[] sorted = new string[339];
+            sorted[0] = input4[0];
+            for (int i = 0; i < input4.Length; i++)
+            {
+                sorted[i] = search(input4[i]);
+            }
+            return sorted[1];
+        }
+        public string search(string input)
+        {
+            string[] a = input.Split('-');
+            string search = a[1].Substring(2);
+            int index;
+            for (int i = 0; i < input4.Length; i++)
+            {
+                index = input4[i].IndexOf(search);
+                if (index >= 0)
+                {
+                    return input4[index]; 
+                }
+
+                
+            }
+            return "";
+        }
 
         public string[] input4 = new string[339] {
 "bn RSHIFT 2 -> bo",

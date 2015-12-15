@@ -135,6 +135,8 @@ namespace Advent
             day7 d7 = new day7();
             Console.WriteLine("Day 7");
             Console.ReadLine();
+            Console.WriteLine(d7.sortList());
+            Console.ReadLine();
             for (int i = 0; i < d7.input4.Length; i++)
             {
                 d7.logicgate(d7.input4[i]);
