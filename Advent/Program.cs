@@ -264,6 +264,9 @@ namespace Advent
             day16 d16 = new day16();
             Console.WriteLine("Day 16");
             Console.ReadLine();
+            d16.setup();
+            Console.WriteLine(d16.CompareSues());
+            Console.ReadLine();
         }
         public static void day17()
         {
