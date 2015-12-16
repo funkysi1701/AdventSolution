@@ -267,6 +267,8 @@ namespace Advent
             d16.setup();
             Console.WriteLine(d16.CompareSues());
             Console.ReadLine();
+            Console.WriteLine(d16.CompareSuespart2());
+            Console.ReadLine();
         }
         public static void day17()
         {

@@ -207,5 +207,34 @@ namespace Advent
             }
             return possible.ToList().IndexOf(possible.Max());
         }
+
+        public int CompareSuespart2()
+        {
+            int[] possible = new int[501];
+            for (int i = 1; i < 501; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (j == (int)sueThings.cats && (sue[i, 1] <= XmasSue[1]))
+                    {
+                        possible[i]++;
+                    }
+                    else if (j == (int)sueThings.trees && (sue[i, 7] <= XmasSue[7]))
+                    {
+                        possible[i]++;
+                    }
+                    else if (j == (int)sueThings.pomeranians && (sue[i, 3] >= XmasSue[3]))
+                    {
+                        possible[i]++;
+                    }
+                    else if (j == (int)sueThings.goldfish && (sue[i, 6] >= XmasSue[6]))
+                    {
+                        possible[i]++;
+                    }
+                    else if (j!=6 && j!=3 && j!=7 && j!= 1 && (sue[i, j] == XmasSue[j])) { possible[i]++; }
+                }
+            }
+            return possible.ToList().IndexOf(possible.Max());
+        }
     }
 }
