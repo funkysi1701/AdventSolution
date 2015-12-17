@@ -276,6 +276,8 @@ namespace Advent
             day17 d17 = new day17();
             Console.WriteLine("Day 17");
             Console.ReadLine();
+            Console.WriteLine(d17.CountCombinations());
+            Console.ReadLine();
         }
         public static void day18()
         {
