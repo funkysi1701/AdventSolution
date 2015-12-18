@@ -285,6 +285,12 @@ namespace Advent
             day18 d18 = new day18();
             Console.WriteLine("Day 18");
             Console.ReadLine();
+            d18.readinput();
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(d18.checkState());
+            }
+            Console.ReadLine();
         }
         public static void day19()
         {
