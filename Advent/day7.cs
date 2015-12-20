@@ -158,28 +158,35 @@ namespace Advent
         public string sortList()
         {
             string[] sorted = new string[339];
+            var numbersList = input4.ToList();
             sorted[0] = input4[0];
             // numbersList;
             for (int i = 0; i < input4.Length; i++)
             {
-                sorted[i] = search(input4[i]);
-                var numbersList = input4.ToList();
-                numbersList.Remove(input4[i]);
+                sorted[i+1] = search(sorted[i]);
+                
+                numbersList.Remove(sorted[i + 1]);
                 input4 = numbersList.ToArray();
             }
+            
             return sorted[1];
         }
         public string search(string input)
         {
+            if (input == "") return "";
             string[] a = input.Split('-');
             string search = a[1].Substring(2);
-            int index;
-            for (int i = 0; i < input4.Length; i++)
+            string index;
+            for (int i = 0; i < input4.Length-1; i++)
             {
-                index = input4[i].IndexOf(search);
-                if (index >= 0)
+                index = input4[i].Substring(0, 2);
+                if (index == search)
                 {
-                    return input4[index]; 
+                    return input4[i]; 
+                }
+                if (input4[i+1].Contains(search))
+                {
+                    return input4[i+1];
                 }
             }
             return "";
