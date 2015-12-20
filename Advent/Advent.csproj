@@ -83,6 +83,9 @@
     <Content Include="day16.txt" />
     <Content Include="day18.txt" />
     <Content Include="day2.txt" />
+    <Content Include="day5.txt" />
+    <Content Include="day6.txt" />
+    <Content Include="day7.txt" />
     <Content Include="day8.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
