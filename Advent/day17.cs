@@ -12,8 +12,16 @@ namespace Advent
         public int total = 150;
         public int count = 0;
         public int[] used = new int[10];
-
-        public int trythis(int q)
+        public static void day_17()
+        {
+            //Day 17 Challenge
+            day17 d17 = new day17();
+            Console.WriteLine("Day 17");
+            Console.ReadLine();
+            Console.WriteLine(d17.main());
+            Console.ReadLine();
+        }
+        public int calcTotal(int q)
         {
             int pos=0;
             for (int j = 0; j < used.Length; j++)
@@ -29,14 +37,24 @@ namespace Advent
                 }
                 if (a) continue;
                 total = (150 - used.Sum()) - containers[i];
-                if (total == 0) { count++; total = 150; used[pos] = containers[i]; continue; }
-                if (total < 0) { continue; }
-                if (total > 0) { used[pos] = containers[i]; trythis(0); }
             }
-            int v = containers.ToList().IndexOf(used[pos - 1]);
-            if (pos>0) used[pos - 1] = 0;
-            trythis(v+1);
-            return count;
+
+            return total;
+        }
+
+        public string main()
+        {
+            int q = calcTotal(0);
+            while (q > 0)
+            {
+                q= calcTotal(0);
+            }
+            if (q == 0) count++;
+            if (q < 0)
+            {
+                //total is -ve
+            }
+            return "";
         }
     }
 }

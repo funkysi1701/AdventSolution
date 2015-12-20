@@ -9,7 +9,20 @@ namespace Advent
 {
     public class day18
     {
-        public string[] input = File.ReadAllLines("E:/Projects/AdventSolution/Advent/day18.txt");
+        public static void day_18()
+        {
+            //Day 18 Challenge
+            day18 d18 = new day18();
+            Console.WriteLine("Day 18");
+            Console.ReadLine();
+            d18.readinput();
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(d18.checkState());
+            }
+            Console.ReadLine();
+        }
+        public string[] input = File.ReadAllLines("../../day18.txt");
         public bool[,] xyinput = new bool[100,100];
         public bool[,] tmp = new bool[100, 100];
         public bool readinput()

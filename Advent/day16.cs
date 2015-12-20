@@ -9,6 +9,18 @@ namespace Advent
 {
     public class day16
     {
+        public static void day_16()
+        {
+            //Day 16 Challenge
+            day16 d16 = new day16();
+            Console.WriteLine("Day 16");
+            Console.ReadLine();
+            d16.setup();
+            Console.WriteLine(d16.CompareSues());
+            Console.ReadLine();
+            Console.WriteLine(d16.CompareSuespart2());
+            Console.ReadLine();
+        }
         public enum sueThings
         {
             children,
@@ -23,7 +35,7 @@ namespace Advent
             perfumes
         }
         public int[,] sue = new int[501,10];
-        public string[] input = File.ReadAllLines("E:/Projects/AdventSolution/Advent/day16.txt");
+        public string[] input = File.ReadAllLines("../../day16.txt");
         public void setup()
         {
             XmasSue[(int)sueThings.children] = 3;

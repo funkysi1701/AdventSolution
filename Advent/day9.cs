@@ -8,6 +8,18 @@ namespace Advent
 {
     public class day9
     {
+        public static void day_9()
+        {
+            //Day 9 Challenge
+            day9 d9 = new day9();
+            Console.WriteLine("Day 9");
+            Console.ReadLine();
+            d9.setup();
+            Console.WriteLine(d9.TotalDistance(true));
+            Console.ReadLine();
+            Console.WriteLine(d9.TotalDistance(false));
+            Console.ReadLine();
+        }
         public enum Destination
         {
             Faerun = 0,

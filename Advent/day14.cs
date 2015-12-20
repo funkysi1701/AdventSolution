@@ -8,6 +8,17 @@ namespace Advent
 {
     public class day14
     {
+        public static void day_14()
+        {
+            //Day 14 Challenge
+            day14 d14 = new day14();
+            Console.WriteLine("Day 14");
+            Console.ReadLine();
+            Console.WriteLine(d14.FastestPart1());
+            Console.ReadLine();
+            Console.WriteLine(d14.FastestPart2());
+            Console.ReadLine();
+        }
         public int[] Rudolph = new int[4] { 22, 8, 0, 165 };
         public int[] Cupid = new int[4] { 8, 17, 0, 114 };
         public int[] Prancer = new int[4] { 18, 6, 0, 103 };

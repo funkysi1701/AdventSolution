@@ -8,6 +8,18 @@ namespace Advent
 {
     public class day13
     {
+        public static void day_13()
+        {
+            //Day 13 Challenge
+            day13 d13 = new day13();
+            Console.WriteLine("Day 13");
+            Console.ReadLine();
+            d13.setup();
+            Console.WriteLine(d13.CalcHappy());
+            Console.ReadLine();
+            Console.WriteLine(d13.CalcHappyAndMe());
+            Console.ReadLine();
+        }
         public enum Guests
         {
             Alice = 0,

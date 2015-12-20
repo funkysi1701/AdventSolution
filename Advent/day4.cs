@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
 
 namespace Advent
@@ -10,7 +7,17 @@ namespace Advent
     public class day4
     {
         public string input = "yzbqklnj";
-
+        public static void day_4()
+        {
+            //Day 4 Challenge
+            day4 d4 = new day4();
+            Console.WriteLine("Day 4");
+            Console.ReadLine();
+            Console.WriteLine(d4.adventcoins(d4.input));
+            Console.ReadLine();
+            Console.WriteLine(d4.adventcoins2(d4.input));
+            Console.ReadLine();
+        }
         public string adventcoins2(string input)
         {
             for (int i = 0; i < 10489710; i++)
@@ -20,8 +27,6 @@ namespace Advent
                 string hash = CalculateMD5Hash(newinput);
                 if (hash.Substring(0, 6) == "000000") return j;
             }
-
-
             return "never found try more loops";
         }
 
@@ -34,8 +39,6 @@ namespace Advent
                 string hash = CalculateMD5Hash(newinput);
                 if (hash.Substring(0, 5) == "00000") return j;
             }
-
-
             return "never found try more loops";
         }
 

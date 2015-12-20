@@ -8,5 +8,12 @@ namespace Advent
 {
     public class day20
     {
+        public static void day_20()
+        {
+            //Day 20 Challenge
+            day20 d20 = new day20();
+            Console.WriteLine("Day 20");
+            Console.ReadLine();
+        }
     }
 }

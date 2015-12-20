@@ -18,6 +18,18 @@ namespace Advent
             int part2 = words.Sum(w => w.Replace("\\", "AA").Replace("\"", "BB").Length + 2 - w.Length);
             return part2;
         }
-        public string[] words = File.ReadAllLines("C:/projects/AdventSolution/Advent/day8.txt");
+        public string[] words = File.ReadAllLines("../../day8.txt");
+
+        public static void day_8()
+        {
+            //Day 8 Challenge
+            day8 d8 = new day8();
+            Console.WriteLine("Day 8"); 
+            Console.ReadLine();
+            Console.WriteLine(d8.doSomething());
+            Console.ReadLine();
+            Console.WriteLine(d8.doSomething2());
+            Console.ReadLine();
+        }
     }
 }

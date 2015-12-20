@@ -8,7 +8,26 @@ namespace Advent
 {
     public class day11
     {
-
+        public static void day_11()
+        {
+            //Day 11 Challenge
+            day11 d11 = new day11();
+            Console.WriteLine("Day 11");
+            Console.ReadLine();
+            while (!d11.ValidString(d11.input))
+            {
+                d11.input = d11.incrementString(d11.input);
+            }
+            Console.WriteLine(d11.input);
+            Console.ReadLine();
+            d11.input = d11.incrementString(d11.input);
+            while (!d11.ValidString(d11.input))
+            {
+                d11.input = d11.incrementString(d11.input);
+            }
+            Console.WriteLine(d11.input);
+            Console.ReadLine();
+        }
         public string input = "cqjxjnds";
         public string incrementString(string input)
         {
@@ -44,7 +63,6 @@ namespace Advent
                 default:
                     break;
             }
-
             return input + tmp;
         }
 

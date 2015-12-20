@@ -8,6 +8,17 @@ namespace Advent
 {
     public class day15
     {
+        public static void day_15()
+        {
+            //Day 15 Challenge
+            day15 d15 = new day15();
+            Console.WriteLine("Day 15");
+            Console.ReadLine();
+            Console.WriteLine(d15.buildCookie());
+            Console.ReadLine();
+            Console.WriteLine(d15.buildHealthyCookie());
+            Console.ReadLine();
+        }
         public enum properties
         {
             capacity = 0,
