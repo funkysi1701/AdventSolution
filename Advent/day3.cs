@@ -10,9 +10,15 @@ namespace Advent
             //Day 3 Challenge
             day3 d3 = new day3();
             Console.WriteLine("Day 3");
+            Console.WriteLine("Santa is delivering presents to an infinite two - dimensional grid of houses.");
+            Console.WriteLine("He begins by delivering a present to the house at his starting location, and then an elf at the North Pole calls him via radio and tells him where to move next. Moves are always exactly one house to the north(^), south(v), east(>), or west (<). After each move, he delivers another present to the house at his new location.");
+            Console.WriteLine("However, the elf back at the north pole has had a little too much eggnog, and so his directions are a little off, and Santa ends up visiting some houses more than once. How many houses receive at least one present ?");
             Console.ReadLine();
             Console.WriteLine(d3.HouseVisit(d3.input));
             Console.ReadLine();
+            Console.WriteLine("The next year, to speed up the process, Santa creates a robot version of himself, Robo - Santa, to deliver presents with him.");
+            Console.WriteLine("Santa and Robo - Santa start at the same location(delivering two presents to the same starting house), then take turns moving based on instructions from the elf, who is eggnoggedly reading from the same script as the previous year.");
+            Console.WriteLine("This year, how many houses receive at least one present?");
             Console.WriteLine(d3.HouseVisit2(d3.input));
             Console.ReadLine();
         }
